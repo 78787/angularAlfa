@@ -1,0 +1,65 @@
+<h1 class="ui header">Produktformular</h1>
+<form class="ui large form" #myForm="ngForm" (ngSubmit)="submitForm()">
+
+
+  <div class="field">
+    <label>Produktname*</label>
+    <input name="name" [(ngModel)]="produkt.name" required>
+    <div *ngIf="errors.name" class="ui negative message">
+      {{ errors.name }}
+    </div>
+  </div>
+
+
+  <div class="field">
+    <label>Beschreibung*</label>
+    <textarea name="description" [(ngModel)]="produkt.description" required rows="3"></textarea>
+    <div *ngIf="errors.name" class="ui negative message">
+      {{ errors.description }}
+    </div>
+  </div>
+
+
+  <div class="field">
+    <label>ID-Nummer*</label>
+    <input name="id" [(ngModel)]="produkt.id" required minlength="2" maxlength="6">
+    <div *ngIf="errors.id" class="ui negative message">
+      {{ errors.id }}
+    </div>
+  </div>
+
+
+  <div class="field">
+    <label>Price</label>
+    <input name="price" [(ngModel)]="produkt.price">
+  </div>
+
+  <div class="field">
+    <label>Available</label>
+    <input name="available" [(ngModel)]="produkt.available">
+  </div>
+
+
+  <div class="field">
+    <label>Bild</label>
+    <input name="img" [(ngModel)]="produkt.img" placeholder="http://example.org/img.jpg">
+  </div>
+
+  <div class="field">
+    <label>More Beschreibung*</label>
+    <textarea name="descriptionFull" [(ngModel)]="produkt.descriptionFull" rows="4"></textarea>
+    <div *ngIf="errors.name" class="ui negative message">
+      {{ errors.descriptionFull }}
+    </div>
+
+  </div>
+
+  <div class="field">
+    <div class="ui checkbox">
+      <input type="checkbox" name="featured" [(ngModel)]="produkt.featured">
+      <label>Featured</label>
+    </div>
+  </div>
+
+  <button type="submit" class="ui button" [disabled]="myForm.invalid">Speichern</button>
+</form>

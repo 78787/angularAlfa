@@ -1,0 +1,35 @@
+<div class="content">
+  <h2 class="ui header">{{ produkt.name }}</h2>
+
+
+  <h4 class="ui horizontal divider header">
+    <i class="tag icon"></i>
+    Description
+  </h4>
+  <p>{{ produkt.description }}</p>
+  <h4 class="ui horizontal divider header">
+    <i class="bar chart icon"></i>
+    Specifications
+  </h4>
+  <table class="ui definition table">
+    <tbody>
+      <tr>
+        <td class="two wide column">ID</td>
+        <td>{{ produkt.id }}</td>
+      </tr>
+      <tr>
+        <td>Bild</td>
+        <td><img class="ui small image" [src]="produkt.img" /></td>
+      </tr>
+      <tr>
+        <td>Auf Lager</td>
+        <td>{{ produkt.available }}</td>
+      </tr>
+      <tr>
+        <td>Price</td>
+        <td>{{ produkt.price }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

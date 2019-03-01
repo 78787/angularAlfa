@@ -1,0 +1,24 @@
+<h1 class="ui header">Unser Team</h1>
+<div class="ui segment" *ngFor="let person of personen">
+  <div class="ui two column very relaxed grid">
+    <div class="column">
+      <h2 class="ui header">
+        <img class="ui avatar image" [src]="person.img">
+        {{person.name}}</h2>
+      <h3 class="ui header">{{person.rolle}}</h3>
+      <div>{{person.description}}</div>
+
+    </div>
+    <div class="column">
+      <p><img class="ui medium  image" [src]="person.img"></p>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+  </div>
+  <div class="ui vertical divider">
+
+  </div>
+
+</div>
+

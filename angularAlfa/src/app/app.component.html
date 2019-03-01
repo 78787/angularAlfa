@@ -1,0 +1,27 @@
+<div class="ui five item tabs menu">
+  <a routerLink="home" routerLinkActive="active" class="item">Home</a>
+  <a routerLink="produkte" routerLinkActive="active" class="item">Produkte</a>
+  <a routerLink="produkte-form" routerLinkActive="active" class="item">Produkte-Form</a>
+  <a routerLink="leistungen" routerLinkActive="active" class="item">Leistungen</a>
+  <a routerLink="leistungen-form" routerLinkActive="active" class="item">Leistungen-Form</a>
+</div>
+
+<div class="ui grid">
+  <div class="four wide column">
+    <router-outlet>
+      <ab-news></ab-news>
+    </router-outlet>
+  </div>
+  <div class="twelve wide column">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<div class="ui two item tabs menu">
+  <a routerLink="impressum" routerLinkActive="active" class="item">Impressum</a>
+  <a routerLink="ueber-uns" routerLinkActive="active" class="item">Über uns</a>
+</div>
+<!--
+
+  
+-->

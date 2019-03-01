@@ -1,0 +1,22 @@
+<h4 class="ui header">Featured Produkte:</h4>
+<div *ngFor="let p of produkte">
+    <div *ngIf="p.featured">
+        <h3><img class="ui avatar image" [src]="p.img"> {{p.name}}</h3>
+
+    </div>
+</div>
+<div class="ui divider"></div>
+<h4 class="ui header">Featured Leistungen:</h4>
+<div *ngFor="let l of leistungen">
+    <div *ngIf="l.featured">
+        <h3><img class="ui avatar image" [src]="l.img"> {{l.name}}</h3>
+
+    </div>
+</div>
+
+<div *ngFor="let n of news, last as l">
+    <div class="ui divider"></div>
+    <h3><img class="ui avatar image" [src]="n.img"> {{n.titel}}</h3>
+    <div>{{n.text}}</div>
+
+</div>

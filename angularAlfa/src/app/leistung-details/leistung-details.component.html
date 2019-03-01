@@ -1,0 +1,50 @@
+<div class="twelve wide column">
+  <h1 class="ui header">{{ leistung.name }}</h1>
+  <h3 class="ui header">{{ leistung.description }}</h3>
+  <div class="ui divider"></div>
+
+  <div class="ui grid">
+
+    <div class="four wide column">
+      <h4 class="ui header">Leistung</h4>
+      {{ leistung.name }}
+    </div>
+
+    <div class="four wide column">
+      <h4 class="ui header">ID</h4>
+      {{ leistung.id }}
+    </div>
+
+    <div class="four wide column">
+      <h4 class="ui header">Preise</h4>
+      {{ leistung.price }}
+    </div>
+
+
+
+    <div class="four wide column">
+      <h4 class="ui header">Bild</h4>
+      <img class="ui tiny image" [src]="leistung.img">
+    </div>
+
+  </div>
+
+</div>
+
+<div class="twelve wide column">
+  <h3 class="ui header">Noch mehr Beschreibung</h3>
+
+  <p> {{ leistung.descriptionFull }}</p>
+  <img class="ui large image" [src]="leistung.img">
+
+  <div class="ui divider"></div>
+
+  <a class="ui tiny yellow labeled icon button" [routerLink]="['../../leistungen-form', leistung?.id]">
+    <i class="write icon"></i> Leistung bearbeiten
+  </a>
+
+  <button class="ui tiny red labeled icon button" (click)="removeLeistungButton()">
+    <i class="remove icon"></i> Leistung löschen
+  </button>
+
+</div>

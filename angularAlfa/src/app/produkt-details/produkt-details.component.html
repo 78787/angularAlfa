@@ -1,0 +1,47 @@
+<div class="twelve wide column">
+  <h1 class="ui header">{{ produkt.name }}</h1>
+  <h3 class="ui header">{{ produkt.description }}</h3>
+  <div class="ui divider"></div>
+
+  <div class="ui grid">
+
+    <div class="four wide column">
+      <h4 class="ui header">ID</h4>
+      {{ produkt.id }}
+    </div>
+
+    <div class="four wide column">
+      <h4 class="ui header">Preise</h4>
+      {{ produkt.price }}
+    </div>
+
+    <div class="four wide column">
+      <h4 class="ui header">Available</h4>
+      {{ produkt.available }}
+    </div>
+
+    <div class="four wide column">
+      <h4 class="ui header">Bild</h4>
+      <img class="ui tiny image" [src]="produkt.img">
+    </div>
+
+  </div>
+
+</div>
+
+<div class="sixteen wide column">
+  <h3 class="ui header">Noch mehr Beschreibung</h3>
+
+  <p> {{ produkt.descriptionFull }}</p>
+  <img class="ui large image" [src]="produkt.img">
+  <div class="ui divider"></div>
+
+
+  <a class="ui tiny yellow labeled icon button" [routerLink]="['../../produkte-form', produkt?.id]">
+    <i class="write icon"></i> Produkt bearbeiten
+  </a>
+
+  <button class="ui tiny red labeled icon button" (click)="removeProdukt()">
+    <i class="remove icon"></i> Produkt löschen
+  </button>
+</div>

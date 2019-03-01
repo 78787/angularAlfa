@@ -1,0 +1,58 @@
+<h1 class="ui header">Leistungformular</h1>
+<form class="ui large form" #myLeistungForm="ngForm" (ngSubmit)="submitForm()">
+
+
+  <div class="field">
+    <label>Leistungname*</label>
+    <input name="name" [(ngModel)]="leistung.name" required>
+    <div *ngIf="errors.name" class="ui negative message">
+      {{ errors.name }}
+    </div>
+  </div>
+
+
+  <div class="field">
+    <label>Beschreibung*</label>
+    <textarea name="description" [(ngModel)]="leistung.description" required rows="3"></textarea>
+    <div *ngIf="errors.name" class="ui negative message">
+      {{ errors.description }}
+    </div>
+  </div>
+
+
+  <div class="field">
+    <label>ID-Nummer*</label>
+    <input name="id" [(ngModel)]="leistung.id" required minlength="2" maxlength="5">
+    <div *ngIf="errors.id" class="ui negative message">
+      {{ errors.id }}
+    </div>
+  </div>
+
+
+  <div class="field">
+    <label>Price</label>
+    <input name="price" [(ngModel)]="leistung.price">
+  </div>
+
+  <div class="field">
+    <label>Bild</label>
+    <input name="img" [(ngModel)]="leistung.img" placeholder="http://example.org/img.jpg">
+  </div>
+
+  <div class="field">
+    <label>More Beschreibung*</label>
+    <textarea name="descriptionFull" [(ngModel)]="leistung.descriptionFull" rows="4"></textarea>
+    <div *ngIf="errors.descriptionFull" class="ui negative message">
+      {{ errors.descriptionFull }}
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="ui checkbox">
+      <input type="checkbox" name="featured" [(ngModel)]="leistung.featured">
+      <label>Featured</label>
+    </div>
+  </div>
+
+  <button type="submit" class="ui button" [disabled]="myLeistungForm.invalid">Speichern</button>
+</form>

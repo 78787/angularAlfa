@@ -1,0 +1,32 @@
+<div class="content">
+  <h2 class="ui header">{{ leistung.name }}</h2>
+
+
+  <h4 class="ui horizontal divider header">
+    <i class="tag icon"></i>
+    Description
+  </h4>
+  <p>{{ leistung.description }}</p>
+  <h4 class="ui horizontal divider header">
+    <i class="bar chart icon"></i>
+    Specifications
+  </h4>
+  <table class="ui definition table">
+    <tbody>
+      <tr>
+        <td class="two wide column">ID</td>
+        <td>{{ leistung.id }}</td>
+      </tr>
+      <tr>
+        <td>Bild</td>
+        <td><img class="ui small image" [src]="leistung.img" /></td>
+      </tr>
+
+      <tr>
+        <td>Price</td>
+        <td>{{ leistung.price }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
